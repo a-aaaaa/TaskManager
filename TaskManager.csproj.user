@@ -7,7 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\DailyTasksView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NewDailyTaskView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DailyTasksView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NewDailyTaskView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

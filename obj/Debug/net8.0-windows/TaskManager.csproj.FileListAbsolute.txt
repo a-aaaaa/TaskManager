@@ -18,3 +18,9 @@ C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\ref
 C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\TaskManager.pdb
 C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\TaskManager.genruntimeconfig.cache
 C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\ref\TaskManager.dll
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\TaskManager.sourcelink.json
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\Views\DailyTasksView.g.cs
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\Views\DailyTasksView.baml
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\Views\NewDailyTaskView.g.cs
+C:\Users\arrah\source\repos\TaskManager\TaskManager\obj\Debug\net8.0-windows\Views\NewDailyTaskView.baml

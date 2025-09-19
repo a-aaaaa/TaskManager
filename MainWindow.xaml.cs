@@ -33,15 +33,7 @@ namespace TaskManager
 
         private void ToBackground()
         {
-            Screen activeMonitor = Screen.FromHandle(new WindowInteropHelper(this).Handle);
-
-            SetWindowPos(new WindowInteropHelper(this).Handle,
-                1,
-                activeMonitor.WorkingArea.X,
-                activeMonitor.WorkingArea.Y,
-                activeMonitor.WorkingArea.Width,
-                activeMonitor.WorkingArea.Height,
-                0);
+            SetWindowPos(new WindowInteropHelper(this).Handle, 1, 0, 0, 0, 0, 0x0002 | 0x0001);
         }
 
         private void MainWindow_LocationChanged(object? sender, EventArgs e)
