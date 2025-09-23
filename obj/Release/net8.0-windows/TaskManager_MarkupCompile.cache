@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\arrah\source\repos\TaskManager\TaskManager\App.xaml
-11407045341
+392681062
 
-4-1263900190
-2071294216742
-MainWindow.xaml;
+13-1401654189
+198-352714763
+MainWindow.xaml;Views\DailyTasksView.xaml;Views\NewDailyTaskView.xaml;
 
 False
 

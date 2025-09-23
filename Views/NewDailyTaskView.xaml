@@ -27,12 +27,14 @@
 
             <Button
                 Grid.Column="1"
+                Command="{Binding AddTaskCommand}"
                 Content="Add task"
                 Padding="10 5"
                 Margin="5 5"/>
 
             <Button
                 Grid.Column="2"
+                Command="{Binding CancelCommand}"
                 Content="Cancel"
                 Padding="10 5"
                 Margin="5 5"/>
@@ -40,6 +42,7 @@
 
         <TextBox
             Grid.Row="1"
+            Text="{Binding TaskName, UpdateSourceTrigger=PropertyChanged}"
             Margin="0 15 0 0"/>
     </Grid>
 </UserControl>

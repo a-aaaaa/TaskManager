@@ -26,25 +26,21 @@
 
             <Button
                 Grid.Column="1"
+                Command="{Binding NewTaskCommand}"
                 Padding="10 5"
                 Content="New Task" />
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0 25 0 0">
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
+        <ListView
+            Grid.Row="1"
+            ItemsSource="{Binding DailyTasks}"
+            Margin="0 25 0 0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Task name" Width="460">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="task 1" />
+                                <TextBlock Text="{Binding TaskName}" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

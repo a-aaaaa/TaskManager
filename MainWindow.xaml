@@ -9,12 +9,12 @@
         Height="450"
         Width="800"
         ShowInTaskbar="False"
-        WindowStyle="None"
+        WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize"
-        AllowsTransparency="True"
+        AllowsTransparency="False"
         Background="AliceBlue"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="15 20" HorizontalAlignment="Center">
-        <views:DailyTasksView/>
+        <views:NewDailyTaskView DataContext="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

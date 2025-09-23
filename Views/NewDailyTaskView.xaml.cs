@@ -24,10 +24,5 @@ namespace TaskManager.Views
         {
             InitializeComponent();
         }
-
-        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-
-        }
     }
 }
