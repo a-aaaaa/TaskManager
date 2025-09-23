@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TaskManager.Commands;
+using TaskManager.Models;
+using TaskManager.Services;
+using TaskManager.Stores;
 
 namespace TaskManager.ViewModels
 {
@@ -27,5 +31,12 @@ namespace TaskManager.ViewModels
         public ICommand AddTaskCommand { get; }
 
         public ICommand CancelCommand { get; }
+
+        public NewDailyTaskViewModel(DailyTaskManager taskManager,
+            NavigationService dailyTasksViewNavigationService)
+        {
+            AddTaskCommand = new AddTaskCommand(this, taskManager, dailyTasksViewNavigationService);
+            CancelCommand = new NavigateCommand(dailyTasksViewNavigationService);
+        }
     }
 }

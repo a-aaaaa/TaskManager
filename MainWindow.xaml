@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManager" xmlns:views="clr-namespace:TaskManager.Views"
+        xmlns:vms="clr-namespace:TaskManager.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="450"
@@ -15,6 +16,16 @@
         Background="AliceBlue"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="15 20" HorizontalAlignment="Center">
-        <views:NewDailyTaskView DataContext="{Binding CurrentViewModel}"/>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:DailyTasksViewModel}">
+                <views:DailyTasksView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:NewDailyTaskViewModel}">
+                <views:NewDailyTaskView />
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}" />
+
     </Grid>
 </Window>
