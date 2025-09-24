@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskManager.Services.DailyTaskCreators;
+using TaskManager.Services.DailyTaskProviders;
 
 namespace TaskManager.Models
 {
     public class DailyTaskManager
     {
-        private readonly List<DailyTask> _dailyTasks;
+        private readonly IDailyTaskProvider _dailyTaskProvider;
+        private readonly IDailyTaskCreator _dailyTaskCreator;
 
-        public DailyTaskManager()
+        public DailyTaskManager(IDailyTaskProvider dailyTaskProvider, IDailyTaskCreator dailyTaskCreator)
         {
-            _dailyTasks = new List<DailyTask>();
+            _dailyTaskProvider = dailyTaskProvider;
+            _dailyTaskCreator = dailyTaskCreator;
         }
 
-        public void CreateNewTask(string taskName)
+        public async Task CreateNewTask(string taskName)
         {
-            _dailyTasks.Add(new DailyTask(taskName));
+            await _dailyTaskCreator.CreateDailyTask(new DailyTask(taskName));
         }
 
-        public IEnumerable<DailyTask> GetAllTasks()
+        public async Task<IEnumerable<DailyTask>> GetAllTasks()
         {
-            return _dailyTasks;
+            return await _dailyTaskProvider.GetAllDailyTasks();
         }
     }
 }

@@ -9,7 +9,7 @@ using TaskManager.ViewModels;
 
 namespace TaskManager.Commands
 {
-    class AddTaskCommand : CommandBase
+    class AddTaskCommand : AsyncCommandBase
     {
         private readonly NewDailyTaskViewModel _newDailyTaskViewModel;
         private readonly DailyTaskManager _taskManager;
@@ -31,9 +31,9 @@ namespace TaskManager.Commands
             return !string.IsNullOrEmpty(_newDailyTaskViewModel.TaskName) && base.CanExecute(parameter);
         }
 
-        public override void Execute(object? parameter)
+        public override async Task ExecuteAsync(object? parameter)
         {
-            _taskManager.CreateNewTask(_newDailyTaskViewModel.TaskName);
+            await _taskManager.CreateNewTask(_newDailyTaskViewModel.TaskName);
 
             _dailyTasksViewNavigationService.Navigate();
         }
